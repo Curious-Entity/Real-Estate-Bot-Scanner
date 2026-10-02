@@ -1,6 +1,6 @@
 # MLS Listing Opportunity Scanner
 
-A Python automation project for screening MLS Matrix listings against configurable investment criteria.
+This is a Python automation project for screening MLS Matrix listings against configurable investment criteria.
 
 The scanner restores an authenticated Matrix session, runs a configured property search, exports listings to CSV, and identifies properties that meet defined lot-size and price-per-square-foot thresholds. It can also send email alerts for qualifying matches.
 
@@ -104,23 +104,4 @@ logs/scan.log     # Runtime and diagnostic log
 
 ```bash
 python PPSF_finder.py
-```
-
-## Limitations
-
-- Matrix UI structure and export behavior may change over time.
-- Saved sessions expire and require re-authentication.
-- PPSF is a screening heuristic, not an appraisal or investment recommendation.
-- Listing data should be validated through normal real-estate due diligence.
-
-## Security and data handling
-
-Do not publish MLS exports, captured pages, screenshots, authenticated browser state, or SMTP credentials. Keep these local-only:
-
-```text
-.env
-state.json
-data/
-out/
-logs/
 ```
